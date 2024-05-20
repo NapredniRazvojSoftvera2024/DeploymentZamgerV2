@@ -30,6 +30,11 @@ then
     sudo apt-get install -y nodejs
 fi
 
+if ! command -v npm &> /dev/null; then
+    echo "Installing npm..."
+    sudo apt-get install -y npm
+fi
+
 if ! command -v pm2 &> /dev/null
 then
     echo "Installing PM2..."
