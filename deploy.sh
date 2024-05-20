@@ -23,6 +23,11 @@ SUPER_ADMIN_ROLE_ID=1
 
 echo "Starting deployment of ZamgerV2"
 
+if ! command -v curl &> /dev/null; then
+    echo "Installing curl..."
+    sudo apt-get install -y curl
+fi
+
 if ! command -v node &> /dev/null
 then
     echo "Installing Node.js..."
